@@ -1,0 +1,32 @@
+{
+  "name": "can-wrapper-component",
+  "version": "0.0.1",
+  "description": "Wrapper Components for CanJS",
+  "main": "can-component-wrapper",
+  "homepage": "http://canjs.com",
+  "scripts": {
+    "testee": "testee test/test.html --browsers firefox",
+    "test": "npm run detect-cycle && npm run jshint && npm run testee",
+    "jshint": "jshint ./*.js test/*.js --config"
+  },
+  "author": "",
+  "dependencies": {
+    "can-dom-data-state": "^1.0.5",
+    "can-dom-mutate": "^1.3.6",
+    "can-namespace": "^1.0.0",
+    "can-reflect": "^1.17.9",
+    "can-stache-bindings": "^4.10.0",
+    "can-view-callbacks": "^4.3.6"
+  },
+  "devDependencies": {
+    "can-define": "^2.7.11",
+    "can-dom-events": "^1.3.3",
+    "can-stache": "^4.17.10",
+    "can-view-model": "^4.0.2",
+    "jshint": "^2.10.1",
+    "steal": "^2.2.0",
+    "steal-qunit": "^1.0.2",
+    "steal-tools": "^2.1.0",
+    "testee": "^0.9.0"
+  }
+}
