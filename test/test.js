@@ -4,17 +4,13 @@ var DefineMap = require("can-define/map/map");
 var stache = require("can-stache");
 var domEvents = require("can-dom-events");
 
-QUnit.module("can-wrapper-component", {
-	afterEach () {
-    document.querySelector('#qunit-fixture').innerHTML = '';
-  }
-});
+QUnit.module("can-wrapper-component");
 
 QUnit.test("can-wrapper-component pass attrs down to nested child", function () {
 	wrapperComponent({
 		tag: "my-input",
 		view: `<input />`,
-		ViewModel: DefineMap({}),
+		ViewModel: DefineMap.extend({}),
 		elementToBindTo (frag) {
 			return frag.children[0];
 		}
