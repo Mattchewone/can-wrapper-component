@@ -13,11 +13,12 @@ function wrapperComponent(options) {
 	var view = options.view;
 	var ViewModel = options.ViewModel;
 	var elementToBindTo = options.elementToBindTo;
-
+	var renderer = stache(view);
+	
 	viewCallbacks.tag(tag, function(el, tagData) {
 		domData.set.call(el, "preventDataBindings", true);
 		var parentViewModel = new ViewModel();
-		var frag = stache(view)(parentViewModel);
+		var frag = renderer(parentViewModel);
 		
 		// Get the schema for the VM passed in
 		var ViewModelSchema = canReflect.getSchema(ViewModel);

@@ -2,7 +2,7 @@
   "name": "can-wrapper-component",
   "version": "0.0.1",
   "description": "Wrapper Components for CanJS",
-  "main": "can-component-wrapper",
+  "main": "can-wrapper-component",
   "homepage": "http://canjs.com",
   "scripts": {
     "testee": "testee test/test.html --browsers firefox",
