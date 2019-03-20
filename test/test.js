@@ -1,5 +1,5 @@
 var QUnit = require("steal-qunit");
-var WrapperComponent = require("can-wrapper-component");
+var wrapperComponent = require("can-wrapper-component");
 var DefineMap = require("can-define/map/map");
 var stache = require("can-stache");
 var domEvents = require("can-dom-events");
@@ -11,7 +11,7 @@ QUnit.module("can-wrapper-component", {
 });
 
 QUnit.test("can-wrapper-component pass attrs down to nested child", function () {
-	WrapperComponent({
+	wrapperComponent({
 		tag: "my-input",
 		view: `<input />`,
 		ViewModel: DefineMap({}),
@@ -32,7 +32,7 @@ QUnit.test("can-wrapper-component pass attrs down to nested child", function () 
 });
 
 QUnit.test("can-wrapper-component split attrs between parent component and child component", function () {
-	WrapperComponent({
+	wrapperComponent({
 		tag: "my-input-1",
 		view: `
 			<label>{{ labelText }}</label>
@@ -63,7 +63,7 @@ QUnit.test("can-wrapper-component split attrs between parent component and child
 });
 
 QUnit.test("can-wrapper-component bindings work", function () {
-	WrapperComponent({
+	wrapperComponent({
 		tag: "my-awesome-input",
 		view: `
 			<label>{{ labelText }}</label>

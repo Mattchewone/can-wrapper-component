@@ -4,7 +4,7 @@ This makes creating wrapper like components much easier, so you can forward bind
 
 Example:
 ```js
-WrapperComponent({
+wrapperComponent({
 	tag: "my-awesome-input",
 	view: `
 		<label>{{ labelText }}</label>
